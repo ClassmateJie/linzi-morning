@@ -29,11 +29,6 @@ def get_count(start_date):
     return delta.days
 
 
-def get_retired():
-    delta = datetime.strptime("2058-01-01", "%Y-%m-%d") - today
-    return delta.days
-
-
 def get_birthday(birthday):
     today1 = datetime.now(pytz.timezone(timezone1)).date()
     next = datetime.strptime(str(today1.year) + "-" + birthday, "%Y-%m-%d").replace(tzinfo=pytz.timezone(timezone1))
